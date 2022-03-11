@@ -19,6 +19,8 @@ const addToLiked = (id) => {
   // const lovePost = id.id; 
   // document.getElementById("liked").innerHTML = "";
     likedPostsId.push(id); 
+    // const likePosts = posts.filter((post) => !likedPostsId.includes(post.id));
+
     showPosts(posts);
 };
 
@@ -143,7 +145,7 @@ const showPosts = (posts) => {
 };
 
 const displayLikedPosts = () => {
-  document.getElementById("liked").innerHTML = "";
+  document.getElementById("liked").innerHTML = ""
     const likedPosts = getLikedPosts();
     likedPosts.forEach((post) => {
         const div = createPost(post);
@@ -167,3 +169,32 @@ const loadPosts = async () =>{
 }
 
 loadPosts();
+
+
+
+
+/*
+Author       : Theme_ocean.
+Template Name: Fury - Product Landing Page
+Version      : 1.0
+*/
+// (function($) {
+// 	'use strict';
+	
+// 	jQuery(document).on('ready', function(){
+	
+// 			$('a.page-scroll').on('click', function(e){
+// 				var anchor = $(this);
+// 				$('html, body').stop().animate({
+// 					scrollTop: $(anchor.attr('href')).offset().top - 50
+// 				}, 1500);
+// 				e.preventDefault();
+// 			});		
+
+// 	}); 	
+
+				
+// })(jQuery);
+
+
+  
