@@ -20,8 +20,10 @@ const addToLiked = (id) => {
   // document.getElementById("liked").innerHTML = "";
     likedPostsId.push(id); 
     // const likePosts = posts.filter((post) => !likedPostsId.includes(post.id));
+    const remainingPosts = posts.filter((post) => !reportedPostsId.includes(post.id));
+    showPosts(remainingPosts);
 
-    showPosts(posts);
+    // showPosts(posts);
 };
 
 const reportPost = (id) => {
@@ -57,6 +59,8 @@ const switchTab = (id) => {
     }
 };
 
+{/* <img src="${image?.comments?.user? post.comments.users: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=687&q=80"}" alt="User Picture" /> */}
+
 const createPost = (post) => {
     const image = post.image;
     const div = document.createElement( "article" );
@@ -69,7 +73,7 @@ const createPost = (post) => {
                     target="_blank"
                     class="post__avatar"
                   >
-                    <img src="${image?.comments?.user? post.comments.users: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=687&q=80"}" alt="User Picture" />
+                    <img src="${post?.userImage}" alt="User Picture" />
                   </a>
                   <a href="#" class="post__user">phero</a>
                 </div>
@@ -125,9 +129,9 @@ const createPost = (post) => {
                   <div class="post__description">
                     <small>
                       <a class="post__name--underline" href="#">
-                          ${post.comments[0]?.user}
+                          ${post?.comments[0]?.user}
                       </a>
-                      ${post.comments[0]?.text}
+                      ${post?.comments[0]?.text}
                     </small>
                   </div>
                   <span class="post__date-time">30 minutes ago</span>
@@ -140,10 +144,10 @@ const createPost = (post) => {
 const showPosts = (posts) => {
     const productsContainer = document.getElementById( "posts" );
     productsContainer.innerHTML = "";
-
+    
     posts.forEach((post) => {
-        const div = createPost(post);
-        productsContainer.appendChild(div);
+      const div = createPost(post);
+      productsContainer.appendChild(div);
     });
 };
 

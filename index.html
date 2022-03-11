@@ -148,24 +148,30 @@
               <li>
                   <input type="checkbox" checked>
                   <i class="arrow"></i>
-                  <h2><i class="fas fa-code"></i>1. How does javascript work?
-                  </h2>
-                  <p> At first, Javascript convert/compiled its program to machine language by browser's default engine system to make understand browser because browser/computer can only read machine language. Then browser can able to give output. On server side, Node js is a javascript runtime and it has built on Google Chrome's V8 engine to run javscript program. it’s single-threaded langauge at runtime. That means the code execution will be done one piece at a time.
-                    JavaScript is a single-threaded programming language as we all know, which means it has a single Call Stack. Therefore it can do one thing at a time. The Call Stack is a data structure which records basically where in the program we are. If we step into a function, we put it on the top of the stack. If we return from a function, we pop off the top of the stack. And that’s all the stack can do and javascript work.
+                  <h3><i class="fas fa-code"></i>1. How does javascript work?
+                  </h3>
+                  <!-- Then browser can able to give output.  -->
+                  <p> At first, Javascript convert/compiled its program to machine language by browser's default engine system to make understand browser. Because browser/computer can only read machine language. On server side, Node js is a javascript runtime and it has built on Google Chrome's V8 engine to run javscript program. it’s single-threaded langauge at runtime. It can do one thing at a time what single thread means. It has a single Call Stack. The Call Stack is a data structure which records where in the program we are. If we step into a function, we put it on the top of the stack. If we return from a function, we pop off the top of the stack. Javascript program work/execute code from top to bottom and line by line. And that’s all the stack can do and how javascript work.
                   </p>
               </li>
               <li>
                   <input type="checkbox" checked>
                   <i class="arrow"></i>
-                  <h2><i class="fas fa-question"></i> 2. What does javascript event loop do?
-                  </h2>
-                  <p> The function stack is a function which keeps track of all other functions executed in run time. A stack trace being printed when you run into an error in JavaScript. That is nothing but a snapshot of the function stack at that point when the error occurred. An event loop is something that pulls stuff out of the queue and places it onto the function execution stack whenever the function stack becomes empty.
+                  <h3><i class="fas fa-question"></i> 2. What does javascript event loop do?
+                  </h3>
+                  <!-- Visualize the javascript runtime at runtime and it's called loop.  -->
+
+                  <!-- JavaScript executes all operations on a single thread, but using few smart data structures, it gives us the illusion of multi-threading. -->
+                  
+                  <p>An event loop is something that pulls stuff out of the queue and places it onto the function execution stack whenever the function stack becomes empty. Mainly, event loop is a thing what control the code like which code will print after which code. It executes code from the beginning and line by line. The "Event Loop" is the secret behind JavaScript's asynchronous programming.</p>
+
+                  <p> Some little hints: (step no.1: first of a function check setTimeout, setInterval etc is running or not if yes then it will loop continue and keep on other side until it get exexuted, check OS related tasks and check own tasks. If positive then it will go  step no.2: then check that the pending timers and pending OS/own tasks done or not. if done then it run callbacks and resume the event loop at optimised way. It takes care about any function shouldn't overflow any.)
                   </p>
               </li>
               <li>
                   <input type="checkbox" checked>
-                  <i class="arrow"></i>
-                  <h2><i class="fas fa-laugh"></i>3. What is the differences between Local storage vs Session storage?</h2>
+                  <!-- <i class="arrow"></i> -->
+                  <h3><i class="fas fa-laugh"></i>3. What is the differences between Local storage and Session storage?</h3>
                   <p>
                     <table class="table table-bordered">
                       <thead>
