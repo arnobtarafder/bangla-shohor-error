@@ -59,7 +59,7 @@ const switchTab = (id) => {
     }
 };
 
-{/* <img src="${image?.comments?.user? post.comments.users: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=687&q=80"}" alt="User Picture" /> */}
+// {/* <img src="${image?.comments?.user? post.comments.users: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=687&q=80"}" alt="User Picture" /> */}
 
 const createPost = (post) => {
     const image = post.image;
@@ -129,7 +129,7 @@ const createPost = (post) => {
                   <div class="post__description">
                     <small>
                       <a class="post__name--underline" href="#">
-                          ${post?.comments[0]?.user}
+                          ${post?.comments[0]?.user + ": "}
                       </a>
                       ${post?.comments[0]?.text}
                     </small>
