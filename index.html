@@ -162,8 +162,12 @@
                   <!-- Visualize the javascript runtime at runtime and it's called loop.  -->
 
                   <!-- JavaScript executes all operations on a single thread, but using few smart data structures, it gives us the illusion of multi-threading. -->
+
+                  <!-- The "Event Loop" is the secret behind JavaScript's asynchronous programming. -->
+
+                  <!-- event loop is a thing what control the code like which code will print after which code. -->
                   
-                  <p>An event loop is something that pulls stuff out of the queue and places it onto the function execution stack whenever the function stack becomes empty. Mainly, event loop is a thing what control the code like which code will print after which code. It executes code from the beginning and line by line. The "Event Loop" is the secret behind JavaScript's asynchronous programming.</p>
+                  <p>An event loop is something that pulls stuff out of the queue and places it onto the function execution stack whenever the function stack becomes empty. It executes code from the beginning and line by line. Mainly, The event loop is a process which waits for the Call Stack to be clear before pushing callbacks from the Task Queue to the Call Stack.</p>
 
                   <p> Some little hints: (step no.1: first of a function check setTimeout, setInterval etc is running or not if yes then it will loop continue and keep on other side until it get exexuted, check OS related tasks and check own tasks. If positive then it will go  step no.2: then check that the pending timers and pending OS/own tasks done or not. if done then it run callbacks and resume the event loop at optimised way. It takes care about any function shouldn't overflow any.)
                   </p>
